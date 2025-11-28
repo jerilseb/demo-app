@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Dubbing Demo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Video Dubbing Comparison</h1>
+        <p>Compare original and dubbed videos side-by-side.</p>
+    </header>
+
+    <main id="video-container">
+        <!-- Video pairs will be generated here or hardcoded since we know them -->
+        
+        <section class="comparison-group" id="group-1">
+            <h2>Example 1</h2>
+            <div class="video-row">
+                <div class="video-wrapper">
+                    <h3>Before</h3>
+                    <video id="vid-1-before" src="assets/dubbing/1/before.mp4" controls playsinline></video>
+                </div>
+                <div class="video-wrapper">
+                    <h3>After</h3>
+                    <video id="vid-1-after" src="assets/dubbing/1/after.mp4" controls playsinline></video>
+                </div>
+            </div>
+            
+        </section>
+
+        <section class="comparison-group" id="group-2">
+            <h2>Example 2</h2>
+            <div class="video-row">
+                <div class="video-wrapper">
+                    <h3>Before</h3>
+                    <video id="vid-2-before" src="assets/dubbing/2/before.mp4" controls playsinline></video>
+                </div>
+                <div class="video-wrapper">
+                    <h3>After</h3>
+                    <video id="vid-2-after" src="assets/dubbing/2/after.mp4" controls playsinline></video>
+                </div>
+            </div>
+            
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
