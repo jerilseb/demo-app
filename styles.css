@@ -57,6 +57,10 @@ main {
     gap: 2rem;
 }
 
+.video-row.three-col {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
 .video-wrapper {
     display: flex;
     flex-direction: column;

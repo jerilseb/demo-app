@@ -1,30 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const groups = ['1', '2'];
+    const groups = document.querySelectorAll('.comparison-group');
 
-    groups.forEach(id => {
-        setupExclusivePlayback(id);
+    groups.forEach(group => {
+        setupGroupPlayback(group);
     });
 });
 
-function setupExclusivePlayback(id) {
-    const v1 = document.getElementById(`vid-${id}-before`);
-    const v2 = document.getElementById(`vid-${id}-after`);
+function setupGroupPlayback(groupElement) {
+    const videos = groupElement.querySelectorAll('video');
 
-    // When v1 plays, pause v2
-    v1.addEventListener('play', () => {
-        if (!v2.paused) {
-            v2.pause();
-        }
+    videos.forEach(video => {
+        video.addEventListener('play', () => {
+            // Pause all other videos in this group
+            videos.forEach(otherVideo => {
+                if (otherVideo !== video && !otherVideo.paused) {
+                    otherVideo.pause();
+                }
+            });
+        });
     });
-
-    // When v2 plays, pause v1
-    v2.addEventListener('play', () => {
-        if (!v1.paused) {
-            v1.pause();
-        }
-    });
-    
-    // Optional: Sync current time when one is played, so they stay aligned? 
-    // The user only said "dont play both at the same time", usually implies audio overlap issues.
-    // I will leave time-sync out to keep it simple and manual unless requested.
 }
