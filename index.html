@@ -8,57 +8,67 @@
 </head>
 <body>
     <header>
-        <h1>Video Dubbing</h1>
+        <h1>Demo</h1>
     </header>
 
     <main id="video-container">
         <!-- Video pairs will be generated here or hardcoded since we know them -->
         
-        <section class="comparison-group" id="group-1">
-            <h2>English to Hindi</h2>
-            <div class="video-row">
-                <div class="video-wrapper">
-                    <h3>Before</h3>
-                    <video id="vid-1-before" src="assets/dubbing/1/before.mp4" controls playsinline></video>
-                </div>
-                <div class="video-wrapper">
-                    <h3>After</h3>
-                    <video id="vid-1-after" src="assets/dubbing/1/after.mp4" controls playsinline></video>
-                </div>
+        <section class="reference-images">
+            <h2>Videos are generated just using these AI-generated reference images</h2>
+            <div class="image-grid">
+                <img src="assets/character/references/man1.png" alt="Reference 1" class="ref-img">
+                <img src="assets/character/references/man2.png" alt="Reference 2" class="ref-img">
+                <img src="assets/character/references/woman2.png" alt="Reference 3" class="ref-img">
+                <img src="assets/character/references/woman3.png" alt="Reference 4" class="ref-img">
             </div>
-            
         </section>
 
         <section class="comparison-group" id="group-2">
-            <h2>Hindi to English</h2>
+            <h2>English</h2>
             <div class="video-row">
                 <div class="video-wrapper">
-                    <h3>Before</h3>
-                    <video id="vid-2-before" src="assets/dubbing/2/before.mp4" controls playsinline></video>
+                    <h3>Original</h3>
+                    <video id="vid-2-before" src="assets/character/44.mp4" controls playsinline></video>
                 </div>
                 <div class="video-wrapper">
-                    <h3>After</h3>
-                    <video id="vid-2-after" src="assets/dubbing/2/after.mp4" controls playsinline></video>
+                    <h3>Character 3</h3>
+                    <video id="vid-2-after" src="assets/character/44_1.mp4" controls playsinline></video>
+                </div>
+                <div class="video-wrapper">
+                    <h3>Character 4</h3>
+                    <video id="vid-2-after" src="assets/character/44_2.mp4" controls playsinline></video>
                 </div>
             </div>
             
         </section>
 
-        <section class="comparison-group" id="group-bg-1">
-            <h2>Background Change</h2>
+        <section class="comparison-group" id="group-1">
+            <h2>Hindi</h2>
             <div class="video-row">
                 <div class="video-wrapper">
-                    <h3>Before</h3>
-                    <video id="vid-bg-1-before" src="assets/background/1/before.mp4" controls playsinline></video>
+                    <h3>Original</h3>
+                    <video id="vid-1-before" src="assets/character/22_1.mp4" controls playsinline></video>
                 </div>
                 <div class="video-wrapper">
-                    <h3>After</h3>
-                    <video id="vid-bg-1-after-2" src="assets/background/1/after_2.mp4" controls playsinline></video>
+                    <h3>Character 1</h3>
+                    <video id="vid-1-before" src="assets/character/22_2.mp4" controls playsinline></video>
+                </div>
+                <div class="video-wrapper">
+                    <h3>Character 2</h3>
+                    <video id="vid-1-before" src="assets/character/22_3.mp4" controls playsinline></video>
                 </div>
             </div>
+            
         </section>
 
     </main>
+
+    <!-- The Modal -->
+    <div id="image-modal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
 
     <script src="script.js"></script>
 </body>
