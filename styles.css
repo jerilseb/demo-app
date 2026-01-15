@@ -52,18 +52,22 @@ main {
 }
 
 .video-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 2rem;
+    align-items: center;
 }
 
 .video-row.three-col {
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
 
 .video-wrapper {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    max-width: 800px; /* Limit width for landscape videos */
 }
 
 .video-wrapper h3 {
@@ -79,7 +83,14 @@ video {
     width: 100%;
     border-radius: 4px;
     background: #000;
-    aspect-ratio: 9/16; 
+    /* aspect-ratio removed to allow natural video dimensions */
+}
+
+/* Specific style to reduce height of the Ad video */
+#ad-video {
+    max-height: 500px;
+    width: auto; /* Allow width to shrink to maintain aspect ratio */
+    align-self: center; /* Center it in the flex container */
 }
 
 .controls {
